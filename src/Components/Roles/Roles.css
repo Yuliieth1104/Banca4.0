@@ -1,0 +1,30 @@
+.row {
+    text-align: center;
+    padding-top: 7%;
+   
+}
+
+.ImagenF {
+    filter: hue-rotate(209deg) brightness(200%);
+}
+
+.TituloR {
+    padding: 3%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.Croles {
+    position: relative;
+}
+
+.Formu {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Lform {
+    text-align: center;
+}
