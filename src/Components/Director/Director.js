@@ -10,7 +10,7 @@ let History  = useHistory();
 
     return (
         <div>
-            <Button onClick = {()=>History.push('/home')}>Inicio</Button>
+            <Button onClick = {()=>History.push('/')}>Inicio</Button>
             <br/>
             <br/>
             <Button onClick = {()=>History.push('/Roles')}> Regresar</Button>

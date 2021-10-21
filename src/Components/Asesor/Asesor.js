@@ -11,10 +11,16 @@ const Asesor = () => {
 
     return (
         <div>
-            <Button onClick = {()=>History.push('/home')}>Inicio</Button>
+            <Button onClick = {()=>History.push('/')}>Inicio</Button>
             <br/>
             <br/>
             <Button onClick = {()=>History.push('/Roles')}> Regresar</Button>
+            <br/>
+            <br/>
+            <Button onClick = {()=>History.push('/PersonaNatural')}>Persona Natural</Button>
+            <br/>
+            <br/>
+            <Button onClick = {()=>History.push('/PersonaJuridica')}>Persona Juridica</Button>
         </div>
     )
 }

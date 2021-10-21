@@ -10,7 +10,7 @@ const Roles = () => {
     let History = useHistory();
     return (
         <div>
-            <Button onClick = {()=>History.push('/home')}>Regresar</Button>
+            <Button onClick = {()=>History.push('/')}>Regresar</Button>
             <div className = "Croles">
             <div className = "row">
                 <h1 className = "TituloR">Escoge tu Rol</h1>
@@ -71,14 +71,14 @@ const Roles = () => {
                         <div className = "col">
                             <img className = ""
                                 alt=""
-                                src="https://www.amvcolombia.org.co/wp-content/uploads/2018/08/carlo-2-292x300.png"
+                                src="https://www.deem.com.ar/images/diseno-web/deem-atencionalcliente.png"
                                 width="150"
                                 height="150"
                             />
                             <ul className = "list-unstyled">
                                 <li><b>Asesor</b></li>
                                 <div className = "Formu"><li><Form.Select aria-label="Default select example">
-                                        <option className = "Lform">Selecciona el # de Rol</option>
+                                        <option className = "Lform">Numero de Rol</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>

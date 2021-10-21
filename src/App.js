@@ -12,14 +12,13 @@ import Director from './Components/Director/Director'
 import Gerente from './Components/Gerente/Gerente'
 import Asesor from './Components/Asesor/Asesor'
 import Cajero from './Components/Cajero/Cajero'
+import PersonaNatural from './Components/Asesor/Persona Natural';
 
 function App() {
   return (
     <Router>
     <Switch>
-          <Route path="/home">
-          <Index />
-          </Route>
+          
           <Route path="/Roles">
           <Roles />
           </Route>
@@ -34,6 +33,12 @@ function App() {
           </Route>
           <Route path="/Cajero">
           <Cajero />
+          </Route>
+          <Route path="/PersonaNatural">
+          <PersonaNatural/>
+          </Route>
+          <Route path="/">
+          <Index />
           </Route>
         </Switch>
     </Router>
