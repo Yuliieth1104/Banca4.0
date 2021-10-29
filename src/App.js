@@ -12,7 +12,7 @@ import Director from './Components/Director/Director'
 import Gerente from './Components/Gerente/Gerente'
 import Asesor from './Components/Asesor/Asesor'
 import Cajero from './Components/Cajero/Cajero'
-import PersonaNatural from './Components/Asesor/Persona Natural';
+import PersonaNatural from './Components/Asesor/PersonaNatural';
 
 function App() {
   return (
