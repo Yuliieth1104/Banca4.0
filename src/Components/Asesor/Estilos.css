@@ -1,46 +1,46 @@
 *{
     box-sizing: border-box;
-}
-
-main{
+ }
+  
+ main{
     max-width: 1050px;
     width: 95%;
     margin: auto;
     padding: 40px;
-}
- 
-.espacio{
+ }
+ .espacio{
     background:rgb(61, 61, 247);
     color:cornsilk;
     text-align: left;
-}
-
-.titulo{
+ }
+  
+ .titulo{
      font-family: 'Lucida Sans';
-}
-
-.PN{
+ }
+  
+ .PN{
     text-align: center;
-}
-
-.row{
+ }
+  
+ .row{
     text-align: left;
-}
-
-.mb-3{
+ }
+  
+ .mb-3{
     text-align: justify;
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-.column{
+ }
+  
+ .column{
     text-align: justify;
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-.parrafo{
+ }
+  
+ .parrafo{
     text-align: justify;
-}
+ }
+ 
