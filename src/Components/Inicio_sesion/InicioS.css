@@ -18,10 +18,11 @@ main {
 
 .Fondo {
 	position: absolute;
-	background: #e5e5e5;
+	background:#00CED1;
 	height: 100%;
 	width: 100%;
 	font-family: 'Roboto', sans-serif;
+	display: flex;
 }
 
 .cont {
@@ -37,3 +38,9 @@ main {
 	
 }
 
+main {
+	align-items: center;
+	background: #AED6F1;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+	border-radius: 10px;
+}

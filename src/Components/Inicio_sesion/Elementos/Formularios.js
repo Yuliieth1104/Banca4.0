@@ -31,7 +31,7 @@ const GrupoInput = styled.div`
 
 const Input = styled.input`
 	width: 100%;
-	background: #fff;
+	background: #AFEEEE;
 	border-radius: 3px;
 	height: 45px;
 	line-height: 45px;
@@ -100,8 +100,8 @@ const ContenedorBotonCentrado = styled.div`
 const Boton = styled.button`
 	height: 45px;
 	width: 200px;
-	background: #0C01F5;
-	color: #fff;
+	background: #FFFFFF;
+	color: #00CED1;
 	font-weight: bold;
 	border: none;
 	border-radius: 10px;
