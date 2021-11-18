@@ -17,9 +17,7 @@ function App() {
   return (
     <Router>
     <Switch>
-          <Route path="/">
-          <Index />
-          </Route>
+          
           <Route path="/Roles">
           <Roles />
           </Route>
@@ -34,6 +32,9 @@ function App() {
           </Route>
           <Route path="/Cajero">
           <Cajero />
+          </Route>
+          <Route path="/">
+          <Index />
           </Route>
         </Switch>
     </Router>

@@ -10,7 +10,7 @@ const Roles = () => {
     let History = useHistory();
     return (
         <div>
-            <Button onClick = {()=>History.push('/home')}>Regresar</Button>
+            <Button onClick = {()=>History.push('/')}>Regresar</Button>
             <div className = "Croles">
             <div className = "row">
                 <h1 className = "TituloR">Escoge tu Rol</h1>
@@ -42,6 +42,7 @@ const Roles = () => {
                         </div>
                         {/* column2 */}
                          <div className = "col">
+                             <div className="Fl">
                             <img className = ""
                                 alt=""
                                 src="https://cdn-icons-png.flaticon.com/512/1802/1802979.png"
@@ -66,6 +67,7 @@ const Roles = () => {
                                 height = "50" /></a>
                                 </li>
                             </ul>
+                            </div>
                         </div>
                         {/* column3 */}
                         <div className = "col">

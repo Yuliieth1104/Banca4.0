@@ -5,11 +5,13 @@ import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from './ComponentesInicio/Input';
 import './InicioS.css'
 import logo from '../Inicio_sesion/Logo/logo.svg'
+import { useHistory } from "react-router-dom";
 
 const App = () => {
 	const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
 	const [password, cambiarPassword] = useState({campo: '', valido: null});
 	const [formularioValido, cambiarFormularioValido] = useState(null);
+	let history = useHistory();
 
 	const expresiones = {
 		usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guion_bajo
@@ -29,6 +31,7 @@ const App = () => {
 			cambiarFormularioValido(true);
 			cambiarUsuario({campo: '', valido: ''});
 			cambiarPassword({campo: '', valido: null});
+			history.push("/Roles");
 			
 
 		} else {
@@ -81,8 +84,8 @@ const App = () => {
 				</MensajeError>}
 				<br/>
 				<ContenedorBotonCentrado>
-					<Boton type="submit" className = "Botonsito"><span>Ingresar</span></Boton>
-					{formularioValido === true && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>}
+					<Boton type="submit" className = "Botonsito" ><span>Ingresar</span></Boton>
+					{/* {formularioValido === true && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>} */}
 				</ContenedorBotonCentrado>
 			</Formulario>
 			</div>
