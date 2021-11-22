@@ -15,6 +15,9 @@ const Asesor = () => {
             <br/>
             <br/>
             <Button onClick = {()=>History.push('/Roles')}> Regresar</Button>
+            <br/>
+            <br/>
+            <Button onClick = {()=>History.push('/PersonaJuridica')}>Persona Juridica</Button>
         </div>
     )
 }

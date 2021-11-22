@@ -1,98 +1,51 @@
-import React, {useState} from 'react';
-import {Formulario,  ContenedorBotonCentrado, Boton, MensajeExito, MensajeError, } from './Elementos/Formularios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import Input from './ComponentesInicio/Input';
+import React from 'react'
+import {Form, Col, Row} from 'react-bootstrap'
+import Button from 'react-bootstrap/Button'
+import { useHistory } from 'react-router-dom'
 import './InicioS.css'
-import logo from '../Inicio_sesion/Logo/logo.svg'
-import { useHistory } from "react-router-dom";
 
-const App = () => {
-	const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
-	const [password, cambiarPassword] = useState({campo: '', valido: null});
-	const [formularioValido, cambiarFormularioValido] = useState(null);
-	let history = useHistory();
+const InicioS = () => {
 
-	const expresiones = {
-		usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-		password: /^.{4,12}$/, // 4 a 12 digitos.
-		
-	}
+let History = useHistory();
 
-	const onSubmit = (e) => {
-		e.preventDefault();
-
-		if(
-			usuario.valido === 'true' &&
-			password.valido === 'true' 
-      
-			)
-    {
-			cambiarFormularioValido(true);
-			cambiarUsuario({campo: '', valido: ''});
-			cambiarPassword({campo: '', valido: null});
-			history.push("/Roles");
-			
-
-		} else {
-			cambiarFormularioValido(false);
-		}
-	}
-
-	return (
-
-		
-				
-		<div className = "Fondo">
-		<main className="main">
-			<div className = "cont">
-			<img className = "Logo"
-                                alt=""
-                                src={logo}
-                                width="400"
-                                height="150"
-                            />
-							<br/>
-							<div className = "">
-			<Formulario action="" onSubmit={onSubmit}>
-				<Input
-					estado={usuario}
-					cambiarEstado={cambiarUsuario}
-					tipo="text"
-					label="Usuario"
-					placeholder="john123"
-					name="usuario"
-					leyendaError="El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo."
-					expresionRegular={expresiones.usuario}
-				/>
-				
-				<Input
-					estado={password}
-					cambiarEstado={cambiarPassword}
-					tipo="password"
-					label="Contraseña"
-					name="password1"
-					leyendaError="La contraseña tiene que ser de 4 a 12 dígitos."
-					expresionRegular={expresiones.password}
-				/>
-				
-				{formularioValido === false && <MensajeError>
-					<p>
-						<FontAwesomeIcon icon={faExclamationTriangle}/>
-						<b>Error:</b> Por favor rellena el formulario correctamente.
-					</p>
-				</MensajeError>}
-				<br/>
-				<ContenedorBotonCentrado>
-					<Boton type="submit" className = "Botonsito" ><span>Ingresar</span></Boton>
-					{/* {formularioValido === true && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>} */}
-				</ContenedorBotonCentrado>
-			</Formulario>
-			</div>
-			</div>
-		</main>
-		</div>
-	);
+    return (
+      <div className = "row">
+        <div className = "col">
+      <div className = "Cprimario">
+        <div className = "Csecundario">
+        <img className = "Logo"
+          alt=""
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Sena_Colombia_logo.svg/1045px-Sena_Colombia_logo.svg.png"
+          width="200"
+          height="200"
+    
+        />
+        <br/>
+      <Form className = "Formulario">
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label for="validationCustomUsername">Correo Electronico</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" className = "Ccorreo"/>
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Contraseña</Form.Label>
+        <Form.Control type="password" placeholder="Password" className = "Ccontraseña"/>
+      </Form.Group>
+      <div className = "check"><Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
+        <Col sm={{ span: 10, offset: 2 }}>
+          <Form.Check label="Recordarme" />
+        </Col>
+      </Form.Group></div>
+      <div className = "Bingresar">
+      <Button variant="primary" onClick = {()=>History.push('/Roles')}>
+        Ingresar
+      </Button>
+      </div>
+    </Form>
+    </div>
+    </div>
+    </div>
+    </div>
+    )
 }
- 
-export default App;
+
+export default InicioS
