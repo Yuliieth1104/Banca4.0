@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from './ComponentesInicio/Input';
 import './InicioS.css'
+import logo from '../Inicio_sesion/Logo/logo.svg'
 
 const App = () => {
 	const [usuario, cambiarUsuario] = useState({campo: '', valido: null});
@@ -36,19 +37,20 @@ const App = () => {
 	}
 
 	return (
+
+		
+				
 		<div className = "Fondo">
-			<div className = "row">
-				<div className = "col">
-		<main>
+		<main className="main">
 			<div className = "cont">
 			<img className = "Logo"
                                 alt=""
-                                src="https://cdn-icons-png.flaticon.com/512/535/535239.png"
-                                width="150"
+                                src={logo}
+                                width="400"
                                 height="150"
                             />
 							<br/>
-							
+							<div className = "">
 			<Formulario action="" onSubmit={onSubmit}>
 				<Input
 					estado={usuario}
@@ -84,9 +86,8 @@ const App = () => {
 				</ContenedorBotonCentrado>
 			</Formulario>
 			</div>
+			</div>
 		</main>
-		</div>
-		</div>
 		</div>
 	);
 }
