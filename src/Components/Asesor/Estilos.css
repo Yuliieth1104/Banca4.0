@@ -1,46 +1,92 @@
-*{
-    box-sizing: border-box;
- }
-  
- main{
-    max-width: 1050px;
-    width: 95%;
-    margin: auto;
-    padding: 40px;
- }
- .espacio{
-    background:rgb(61, 61, 247);
-    color:cornsilk;
-    text-align: left;
- }
-  
- .titulo{
-     font-family: 'Lucida Sans';
- }
-  
- .PN{
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.titulo{
     text-align: center;
- }
-  
- .row{
-    text-align: left;
- }
-  
- .mb-3{
-    text-align: justify;
+    font-size: 400%;
+    font-family:'Roboto';
+}
+
+.input{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
- }
-  
- .column{
-    text-align: justify;
+    background: white;
+    border: 3px solid rbg(255, 208, 1);
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+    box-sizing: border-box;
+    outline: none;
+    border-color: black;
+}
+
+.label{
+    width: 50%;
+    font-weight: 700;
+    padding: 10px;
+    cursor:pointer;
+    color: black;
+}
+
+.div{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
- }
-  
- .parrafo{
-    text-align: justify;
- }
- 
+}
+
+.col-md-4{
+   border-color: black;
+   border-width: 1px;
+   border-radius: 4px;
+   border-style: solid;
+   margin-top: -4%;
+   
+}
+
+.titulitos{
+    color: white;
+    background-color: #157ee0;
+    font-weight: 700;
+    text-align: center;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+}
+
+.contenedor4{
+    border-color: black;
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    width: 100%;
+    margin-top: -0%;   
+}
+
+.padre{
+    background-color: #EBF5FB;
+    padding: 30px;
+}
+
+.select{
+    border-color: black;
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    width: 100%;
+}
+
+.bordes{
+    border-color: black;
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    width: 100%;
+}
+
+.red-red{
+    --bs-gutter-x: 0rem !important;
+}
+
+.cuadro{
+    background-color: chartreuse;
+    width: 30%;
+    text-align: center;
+}

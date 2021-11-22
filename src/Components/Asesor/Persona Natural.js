@@ -1,517 +1,233 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import './Estilos.css'
-import {Form, FormCheck} from 'react-bootstrap'
-import Col from 'react-bootstrap/Col'
-import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
+import Col from 'react-bootstrap/Col'
+
+
+
+
 
 const PersonaNatural = () => {
+  return (
+    <div className="padre">
+      <h1 className='titulo'>PERSONA NATURAL</h1>
+      <br />
+      <br />
 
-    const [startDate, setStartDate] = useState(new Date());
-    return (
-       
-    <main className="titulo">
+      <form className="Form">
+        <div className="row red-red" >
+          <div className="col-md-4">
+            <Col className="">
+              <h5 className="titulitos">Tipo de solicitud</h5>
+              <label className="label">
+                Vinculación
+                <input
+                  type="checkbox"
+                  name="nombre"
+                  className=""
+                />
+              </label>
+              <label className="label">
+                Actualización
+                <input
+                  type="checkbox"
+                  name="nombre"
+                  className=""
+                />
+              </label>
+            </Col>
+          </div>
 
-        <div className='PN'>
-            <h1>PERSONA NATURAL</h1>
+          <div className="col-md-4">
+            <Col className="">
+              <h5 className="titulitos">Tipo de solicitante</h5>
+              <label className="label">
+                Beneficiario/Ordenante de giros
+                <input
+                  type="checkbox"
+                  name="nombre"
+                  className=""
+                />
+              </label>
+            </Col>
+          </div>
+
+          <div className="col-md-4">
+            <Col className="">
+              <h5 className="titulitos">Fecha de diligenciamiento</h5>
+              <label className="label">
+                <input
+                  type="date"
+                  name="nombre"
+                  className="select"
+                />
+              </label>
+            </Col>
+          </div>
+
         </div>
-        <br/>
 
-        <div className='row'>
-        <Col> 
-        <h4 className="espacio">Tipo de solicitud</h4>
-        <Form>
-  {['checkbox'].map((type) => (
-    <div key={`inline-${type}`} className="mb-3">
-      <Form.Check
-        inline
-        label="Vinculación"
-        name="group1"
-        type={type}
-        id={`inline-${type}-1`}
-      />
-      <Form.Check
-        inline
-        label="Actualización"
-        name="group1"
-        type={type}
-        id={`inline-${type}-2`}
-      />
+        <div className="contenedor4">
+          <h5 className="titulitos">Informacion personal</h5>
+          <label className="label">
+            Primer Nombre
+            <input
+              type="text"
+              name="nombre"
+              className="input"
+            />
+          </label>
 
-    </div>
-  ))}
-</Form>
-          </Col>
-        <Col> 
-        <h4 className="espacio">Tipo de solicitante</h4>
-        <Form>
-  {['checkbox'].map((type) => (
-    <div key={`inline-${type}`} className="mb-3">
-      <Form.Check
-        inline
-        label="Beneficiario/Ordenante de giros"
-        name="group1"
-        type={type}
-        id={`inline-${type}-1`}
-      />
-    </div>
-  ))}
-</Form>
-          </Col>
+          <label className="label">
+            Segundo Nombre
+            <input
+              type="text"
+              name="nombre"
+              className="input"
+            />
+          </label>
 
-        <Col> 
-        <h4 className="espacio">Fecha diligenciamiento</h4>
+          <label className="label">
+            Primer Apellido
+            <input
+              type="text"
+              name="nombre"
+              className="input"
+            />
+          </label>
 
-        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-  
-          </Col>
+          <label className="label">
+            Segundo Apellido
+            <input
+              type="text"
+              name="nombre"
+              className="input"
+            />
+          </label>
         </div>
-        <div className='row'>
-            <h4 className="espacio">Información personal</h4>
-        <br/>
-        <Col className='column'>
-        <form action="">
-            <label htmlFor="">Primer Nombre</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        <br/>
-        <form action="">
-            <label htmlFor="">Primer Apellido</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-         </Col>
-        <br/>
-        <Col className='column'>
-        <form action="">
-            <label htmlFor="">Segundo Nombre</label>
-            <input type="text" placeholder="Usuario"/>
-        </form> 
-        <br/>
-        <form action="">
-            <label htmlFor="">Segundo Apellido</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-        <br/>
-       <div className='row'>
-       <div className='Col'>
-       <label htmlFor="">Tipo de documento</label>
-        <Form>
-    {['checkbox'].map((type) => (
-    <div key={`inline-${type}`} className="mb-3">
-      <Form.Check
-        inline
-        label="C.C"
-        name="group1"
-        type={type}
-        id={`inline-${type}-1`}
-      />
-      <Form.Check
-        inline
-        label="T.I"
-        name="group1"
-        type={type}
-        id={`inline-${type}-2`}
-      />
-      <Form.Check
-        inline
-        label="R.civil"
-        name="group1"
-        type={type}
-        id={`inline-${type}-3`}
-      />    
-      <Form.Check
-        inline
-        label="Cédula extranjería"
-        name="group1"
-        type={type}
-        id={`inline-${type}-3`}
-      />    
-      <Form.Check
-      inline
-      label="Pasaporte"
-      name="group1"
-      type={type}
-      id={`inline-${type}-3`}
-    />
-    <Form.Check
-        inline
-        label="Carné diplomatico"
-        name="group1"
-        type={type}
-        id={`inline-${type}-3`}
-      />
-    </div>
-  ))}
-</Form>
 
-</div>
+        <div className="select">
+          <h5>Tipo de documento</h5>
+          <select className="select">
+  <option selected value="C.C">Cédula de Ciudadania</option>
+  <option value="T.I">Tarjeta de identidad</option>
+  <option value="R.C">R.Civil</option>
+  <option value="C.E">Cédula extranjería</option>
+  <option value="P">Pasaporte</option>
+  <option value="C.D">Carné diplomático</option>
+</select>
         </div>
-        </div>
-        <div className='row'>
-        <Col className='column'>
-        <form action="">
-            <label htmlFor="">Nº documento</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        <form action="">
-            <label htmlFor="">Lugar de expedición</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-        <Col className='column'>
-        <form action="">
-            <label htmlFor="">Fecha de expedición</label>
-        </form>
-        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
 
-        <form action="">
-            <label htmlFor="">Fecha de nacimiento</label>
-        </form>
-        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-        </Col>
-     </div>
+      <div className="bordes">
+      <label className="label">
+            Nº documento
+            <input
+              type="text"
+              name="nombre"
+              className="input"
+            />
+          </label>
 
-     <div className='row'>
-     <Col>
-        <form action="">
-            <label htmlFor="">Ciudad de nacimiento</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-        <Col>
-        <form action="">
-            <label htmlFor="">Genero</label>
-        </form>
-       
-        <Form>
-    {['checkbox'].map((type) => (
-    <div key={`inline-${type}`} className="">
-      <Form.Check
-        inline
-        label="F"
-        name="group1"
-        type={type}
-        id={`inline-${type}-1`}
-      />
-      <Form.Check
-        inline
-        label="M"
-        name="group1"
-        type={type}
-        id={`inline-${type}-2`}
-      /> 
+          <label className="label">
+            Fecha de expedición
+            <input
+              type="date"
+              name="nombre"
+              className="input"
+            />
+          </label>
       </div>
-       ))}
-       </Form>
-        </Col>
-        <Col>
-        <form action="">
-            <label htmlFor="">Estado civil</label>
-        </form>
 
-        <Form>
-    {['checkbox'].map((type) => (
-    <div key={`inline-${type}`} className="mb-3">
-      <Form.Check
-        inline
-        label="Soltero"
-        name="group1"
-        type={type}
-        id={`inline-${type}-1`}
-      />
-      <Form.Check
-        inline
-        label="Casado"
-        name="group1"
-        type={type}
-        id={`inline-${type}-2`}
-      /> 
-       <Form.Check
-        inline
-        label="Unión libre"
-        name="group1"
-        type={type}
-        id={`inline-${type}-3`}
-      />
-      </div>
-       ))}
-       </Form>
-        </Col>
-     </div>
-       
-       <div className='row'>
-        <Col>
-        <form action="">
-            <label htmlFor="">Nacionalidad</label>
-        </form>
-        <Form>
-    {['checkbox'].map((type) => (
-    <div key={`inline-${type}`} className="mb-3">
-      <Form.Check
-        inline
-        label="Colombiano"
-        name="group1"
-        type={type}
-        id={`inline-${type}-1`}
-      />
-      <Form.Check
-        inline
-        label="Estado unidense"
-        name="group1"
-        type={type}
-        id={`inline-${type}-2`}
-      /> 
-       <Form.Check
-        inline
-        label="Otra, ¿Cuál?"
-        name="group1"
-        type={type}
-        id={`inline-${type}-3`}
-      />
-      <input type="text" placeholder="Usuario"/>
-      </div>
-       ))}
-       </Form>
-        </Col>
-        </div>
+      <div className="bordes">
+      <label className="label">
+            Lugar de expedición
+            <input
+              type="text"
+              name="nombre"
+              className="input"
+            />
+          </label>
 
-        <div className='row'>
-            <h4 className="espacio">Información de contacto personal</h4>
+          <label className="label">
+            Fecha de nacimiento
+            <input
+              type="date"
+              name="nombre"
+              className="input"
+            />
+          </label>
+      </div>
+
+    
+      <div className="bordes">
+      <label className="label">
+            Ciudad de nacimiento
+            <input
+              type="text"
+              name="nombre"
+              className="input"
+            />
+          </label>
+
+          <div className="row">
+          <div className="col">
+            <Col className="bordes cuadro">
+              <h5>Género</h5>
+              <label className="label">
+                <input
+                  type="checkbox"
+                  name="nombre"
+                  className=""
+                />
+                F
+              </label>
+              <label className="label">
+                <input
+                  type="checkbox"
+                  name="nombre"
+                  className=""
+                />
+                M
+              </label>
+            </Col>
+          </div>
+
+          <div className="col">
+            <Col className="bordes">
+              <h5>Estado civil</h5>
+              <label className="label">
+                Soltero
+                <input
+                  type="checkbox"
+                  name="nombre"
+                  className=""
+                />
+              </label>
+              <label className="label">
+               Casado
+                <input
+                  type="checkbox"
+                  name="nombre"
+                  className=""
+                />
+              </label>
+              <label className="label">
+               Unión libre
+                <input
+                  type="checkbox"
+                  name="nombre"
+                  className=""
+                />
+              </label>
+            </Col>
+          </div>
         </div>
+      </div>
       
-      <div className='row'>
-        <Col>
-        <form action="">
-            <label htmlFor="">Dirección residencia</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-        <br/>
-        <Col>
-        <form action="">
-            <label htmlFor="">Bloque/Torre</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-        <br/>
-        <Col>
-        <form action="">
-            <label htmlFor="">Apto/Casa</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-      </div>
-
-      <div className='row'>
-        <Col>
-        <form action="">
-            <label htmlFor="">Barrio</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-        <br/>
-        <Col>
-        <form action="">
-            <label htmlFor="">Ciudad/Municipio</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-        <br/>
-        <Col>
-        <form action="">
-            <label htmlFor="">Departamento</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-      </div>
-
-      <div className='row'>
-        <Col>
-        <form action="">
-            <label htmlFor="">País</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-        <br/>
-        <Col>
-        <form action="">
-            <label htmlFor="">Teléfono</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-        <br/>
-        <Col>
-        <form action="">
-            <label htmlFor="">Celular</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-      </div>
-      <br/>
-      <Col>
-        <form action="">
-            <label htmlFor="">Correo electrónico laboral</label>
-            <input type="text" placeholder="Usuario"/>
-        </form> 
-      </Col>
-      <div className='row'>
-            <h4 className="espacio">Detalle información financiera</h4>
-        </div>
-        <div className='row'>
-        <Col>
-        <form action="">
-            <label htmlFor="">Ingresos mensuales</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        <br/>
-        <form action="">
-            <label htmlFor="">Otros ingresos mensuales</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        <br/>
-        <form action="">
-            <label htmlFor="">Detalle otros ingresos mensuales
-            (diferentes a su actividad económica principal)</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-         </Col>
-        <br/>
-        <Col>
-        <form action="">
-            <label htmlFor="">Total activos</label>
-            <input type="text" placeholder="Usuario"/>
-        </form> 
-        <br/>
-        <form action="">
-            <label htmlFor="">Total pasivos</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        <br/>
-        <form action="">
-            <label htmlFor="">Total egresos mensuales</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-        </div>
-        <div className='row'>
-        <Col>
-          <h5 className='parrafo'>Si su ocupacion es agricultor, comerciante,independiente o ganadero
-            porfavor diligencie la siguiente información.
-          </h5>
-        </Col>
-
-        <Col> 
-        <form action="">
-            <label htmlFor="">Ventas anuales</label>
-            <input type="text" placeholder="Usuario"/>
-        </form>
-        </Col>
-        
-        <Col>
-        <label htmlFor="">Fecha de diligenciamiento</label>
-
-<DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-       </Col>
-        </div>
-        <div>
-        <div>
-            <h4 className="espacio">Información tributaria</h4>
-        </div>
-        <div className='row'>
-        <Col>
-        <form action="">
-            <label htmlFor="">¿Es declarante de renta?</label>
-        </form>
-        <Form>
-    {['checkbox'].map((type) => (
-    <div key={`inline-${type}`} className="">
-      <Form.Check
-        inline
-        label="Si"
-        name="group1"
-        type={type}
-        id={`inline-${type}-1`}
-      />
-      <Form.Check
-        inline
-        label="No"
-        name="group1"
-        type={type}
-        id={`inline-${type}-2`}
-      /> 
-      </div>
-       ))}
-       </Form>
-        </Col>
-        </div>
-
-        <div>
-        <Col>
-        <form action="">
-            <label htmlFor="">Agente retenedor</label>
-        </form>
-        <Form>
-    {['checkbox'].map((type) => (
-    <div key={`inline-${type}`} className="">
-      <Form.Check
-        inline
-        label="Si"
-        name="group1"
-        type={type}
-        id={`inline-${type}-1`}
-      />
-      <Form.Check
-        inline
-        label="No"
-        name="group1"
-        type={type}
-        id={`inline-${type}-2`}
-      /> 
-      </div>
-       ))}
-       </Form>
-        </Col>
-        </div>
-
-        <div>
-        <Col>
-        <form action="">
-            <label htmlFor="">Régimen de IVA</label>
-        </form>
-        <Form>
-    {['checkbox'].map((type) => (
-    <div key={`inline-${type}`} className="">
-      <Form.Check
-        inline
-        label="Común"
-        name="group1"
-        type={type}
-        id={`inline-${type}-1`}
-      />
-      <Form.Check
-        inline
-        label="Simplificado"
-        name="group1"
-        type={type}
-        id={`inline-${type}-2`}
-      /> 
-      <Form.Check
-        inline
-        label="Ninguno"
-        name="group1"
-        type={type}
-        id={`inline-${type}-3`}
-      /> 
-      </div>
-       ))}
-       </Form>
-        </Col>
-        </div>
+      </form>
     </div>
-    </main>
-   
-    )
+
+  )
 }
 
-export default PersonaNatural
+export default PersonaNatural;
